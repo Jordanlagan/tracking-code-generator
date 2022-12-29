@@ -9,20 +9,22 @@
     </p>
     <p>Continue?</p>
     <button @click="restartSetup">&lt; Go Back</button>
-    <button @click="confirmSetup">Confirm ></button>
+    <ConfirmButton />
+
   </div>
 </template>
 
 <script>
+import ConfirmButton from '~/components/ConfirmButton.vue'
+
 export default {
   methods: {
     restartSetup() {
       this.$router.push('/')
-    },
-    confirmSetup() {
-      this.$router.push('choose-objective')
-    },
+    }
+  },
+  components: {
+    ConfirmButton
   }
 }
 </script>
-kkk
